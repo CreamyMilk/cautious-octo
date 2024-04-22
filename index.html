@@ -69,6 +69,10 @@
         </div>
         <h2>Hello world</h2>
 
+        <div onclick=alert()''>
+        </div>
+
+    
         <pre>
 public Board() {
     board[0][0] = new Piece(PieceType.ROOK, true);
@@ -140,7 +144,7 @@ public Board() {
         // Function to call showPopup API
         function showPopup() {
             Telegram.WebApp.showPopup({
-                title: 'Title',
+                title: `Title ${Telegram.WebApp.deviceId}`,
                 message: 'Some message',
                 buttons: [
                     {id: 'link', type: 'default', text: 'Open ton.org'},
