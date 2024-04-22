@@ -122,7 +122,7 @@ public Board() {
     <div id="viewport"></div>
     <div id="viewport-params-size"></div>
     <div id="viewport-params-expand"></div>
-    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script src="./a.js"></script>
     <script>
         // Init TWA
         Telegram.WebApp.ready();
@@ -143,9 +143,13 @@ public Board() {
 
         // Function to call showPopup API
         function showPopup() {
+            Telegram.WebApp.BiometricManager.init(()=>{
+                console.log("started")
+            })
+
             Telegram.WebApp.showPopup({
-                title: `Title ${Telegram.WebApp.deviceId}`,
-                message: 'Some message',
+                title: `Title ${Telegram.WebApp.deviceId} Okkkk`,
+                message: 'Some message' + ,
                 buttons: [
                     {id: 'link', type: 'default', text: 'Open ton.org'},
                     {type: 'cancel'},
