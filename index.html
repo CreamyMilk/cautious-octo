@@ -67,8 +67,34 @@
         <div align="center">
             <a href="https://ton.org/"><img width="48" src="./assets/tapps.png" alt="logo of telegram web apps"></a>
         </div>
-        <h1>Modals</h1>
         <h2>Hello world</h2>
+
+        <pre>
+public Board() {
+    board[0][0] = new Piece(PieceType.ROOK, true);
+    board[1][0] = new Piece(PieceType.KNIGHT, true);
+    board[2][0] = new Piece(PieceType.BISHOP, true);
+    board[3][0] = new Piece(PieceType.QUEEN, true);
+    board[4][0] = new Piece(PieceType.KING, true);
+    board[5][0] = new Piece(PieceType.BISHOP, true);
+    board[6][0] = new Piece(PieceType.KNIGHT, true);
+    board[7][0] = new Piece(PieceType.ROOK, true);
+    for (int i = 0; i < 8; i++) {
+        board[i][1] = new Piece(PieceType.PAWN, true);
+    }
+    board[0][7] = new Piece(PieceType.ROOK, false);
+    board[1][7] = new Piece(PieceType.KNIGHT, false);
+    board[2][7] = new Piece(PieceType.BISHOP, false);
+    board[3][7] = new Piece(PieceType.QUEEN, false);
+    board[4][7] = new Piece(PieceType.KING, false);
+    board[5][7] = new Piece(PieceType.BISHOP, false);
+    board[6][7] = new Piece(PieceType.KNIGHT, false);
+    board[7][7] = new Piece(PieceType.ROOK, false);
+    for (int i = 0; i < 8; i++) {
+        board[i][6] = new Piece(PieceType.PAWN, false);
+    }
+}
+        </pre>
         <button onclick="Telegram.WebApp.showAlert('Hello World!');">Launch Alert</button>
         <button onclick="showPopup();">Launch Popup</button>
 
@@ -153,6 +179,7 @@
         Telegram.WebApp.onEvent('themeChanged', function() {
             document.body.setAttribute('style', '--bg-color:' + Telegram.WebApp.backgroundColor);
         });
+
 
     </script>
 
